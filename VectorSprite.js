@@ -1,0 +1,9 @@
+function VectorSprite(){
+
+
+
+
+
+}
+
+VectorSprite.prototype
