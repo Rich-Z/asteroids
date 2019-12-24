@@ -5,5 +5,7 @@ Click link to play
 
 Controls:
 spacebar: shoot
+
 right/left: rotate
+
 up: thrust
