@@ -1,13 +1,20 @@
-function Laser(x, y, a){
-    this.x = x;
-    this.y = y;
-    this.a = a;
-    this.xv = LASER_SPD * Math.cos(a) / FPS;
-    this.yv = -LASER_SPD * Math.sin(a) / FPS;
-    this.dist = 0;
-    this.explodeTime = 0;
+import vectorSprite from "./VectorSprite.js";
 
-    this.draw = function(){
+export default class Laser extends vectorSprite{
+
+    constructor(x, y, a){
+        super();
+        this.r = 0;
+        this.x = x;
+        this.y = y;
+        this.a = a;
+        this.xv = LASER_SPD * Math.cos(a) / FPS;
+        this.yv = -LASER_SPD * Math.sin(a) / FPS;
+        this.dist = 0;
+        this.explodeTime = 0;
+    }
+
+    draw(){
         if (this.explodeTime == 0){
             ctx.fillStyle = "salmon";
             ctx.beginPath();
